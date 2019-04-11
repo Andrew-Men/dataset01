@@ -40,8 +40,8 @@ def preProcessData():
 	np.savez('data', imdata=imdata, labels=labels)
 
 def loadData():
-	if not os.path.exists('data.npz'):
-		preProcessData()
+	# if not os.path.exists('data.npz'):
+	# 	preProcessData()
 	data = np.load('data.npz')
 	return (data['imdata'], data['labels'])
 
